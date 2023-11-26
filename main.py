@@ -105,8 +105,21 @@ def save_player_data(player_data, file_name="player_data.json"):
 
 
 if __name__ == "__main__":
-    # player_id = input("Enter player id: ")
-    PLAYER_ID = 2930552
+    PLAYER_ID = input("What's the Player ID you'd like to look up? ")
+    try:
+        PLAYER_ID = int(PLAYER_ID)
+    except ValueError:
+        print(f"Sorry, {PLAYER_ID} isn't a valid ID.")
+        NEW_ID = input("Input again (hint: only numbers please): ")
+        PLAYER_ID = int(NEW_ID)
+    finally:
+        if isinstance(PLAYER_ID, int):
+            print("value accepted")
+        else:
+            # Provide fallback for the probably-intended ID
+            # Note: this is the ID of the person I made this script for
+            PLAYER_ID = 2930552
+            print(f"Substituting test value: {PLAYER_ID}")
 
     raw_player_data = {}
     try:
