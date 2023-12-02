@@ -2,6 +2,8 @@
 
 A script that pulls data from the Age of Empires 4 API to retrieve ranked match results for a given player and graphs them.
 
+Use it on [Replit](https://replit.com/@wearesilence/aoescript)!
+
 ## How It Works
 
 Uses the API from [AoE World](htps://aoeworld.com) to retrieve match results by PLAYER_ID.
